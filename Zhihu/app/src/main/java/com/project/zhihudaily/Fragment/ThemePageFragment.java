@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -73,6 +75,11 @@ public class ThemePageFragment extends Fragment{
         tv_description = (TextView) view.findViewById(R.id.tv_theme_description);
         header = (RecyclerViewHeader) view.findViewById(R.id.header);
         progressBar = (ProgressBar) view.findViewById(R.id.progressbar_theme_page);
+        //添加缩放动画
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(1500);
+        scaleAnimation.setRepeatMode(Animation.REVERSE);
+        img.startAnimation(scaleAnimation);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_theme_page);
         //recyclerView设置管理器
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

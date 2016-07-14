@@ -156,12 +156,14 @@ public class MainActivity extends AppCompatActivity{
         }
         super.onBackPressed();
     }
-   //登陆
+
+    //登陆
     public void login(View view){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivityForResult(intent, 1);
     }
-     //登陆和注册返回结果
+
+    //登陆和注册返回结果
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
