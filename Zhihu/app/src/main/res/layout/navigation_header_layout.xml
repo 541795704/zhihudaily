@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/navigation_header">
+
+    <ImageView
+        android:id="@+id/SimpleDraweeView_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/touxiang"
+         />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SimpleDraweeView_head"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:onClick="login"
+        android:layout_marginTop="8dp"
+        android:text="请登录"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

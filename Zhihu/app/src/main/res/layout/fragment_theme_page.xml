@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/head_theme"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressbar_theme_page"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_theme_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--添加recyclerview头部-->
+    <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal|top">
+
+        <ImageView
+            android:id="@+id/img_theme"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_theme_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:textColor="@color/white" />
+    </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>
+</FrameLayout>

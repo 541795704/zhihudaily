@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.project.zhihudaily.Activities.GuokrDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/guokr_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/guokr_col_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleGravity="right|bottom"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <ImageView
+                android:id="@+id/guokr_iv_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/guoker_toobar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/guokr_name"
+                android:textSize="22sp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/guokr_title"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/guokr_Textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/guokr_fab"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/share"
+        app:elevation="5dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/guokr_app_bar"
+        app:layout_anchorGravity="bottom|right" />
+</android.support.design.widget.CoordinatorLayout>
